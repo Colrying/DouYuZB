@@ -1,19 +1,64 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RecommendCycleViewCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="RecommendCycleViewCell" customModule="DouYuZB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="344" height="161"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <rect key="frame" x="0.0" y="0.0" width="344" height="161"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="xBI-y9-YQL">
+                        <rect key="frame" x="0.0" y="0.0" width="344" height="161"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FP8-AN-mUX">
+                        <rect key="frame" x="0.0" y="131" width="344" height="30"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="斗鱼TV模拟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkv-06-RTX">
+                                <rect key="frame" x="10" y="0.0" width="70" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="jkv-06-RTX" secondAttribute="bottom" id="Et9-Su-B3E"/>
+                            <constraint firstItem="jkv-06-RTX" firstAttribute="top" secondItem="FP8-AN-mUX" secondAttribute="top" id="IDO-ga-TyR"/>
+                            <constraint firstItem="jkv-06-RTX" firstAttribute="leading" secondItem="FP8-AN-mUX" secondAttribute="leading" constant="10" id="aGy-2J-xIw"/>
+                            <constraint firstAttribute="height" constant="30" id="pcw-Yy-xKV"/>
+                        </constraints>
+                    </view>
+                </subviews>
             </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="xBI-y9-YQL" secondAttribute="trailing" id="5KF-sO-UaJ"/>
+                <constraint firstItem="xBI-y9-YQL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="NYJ-AK-2U6"/>
+                <constraint firstAttribute="bottom" secondItem="FP8-AN-mUX" secondAttribute="bottom" id="QNm-HN-OCa"/>
+                <constraint firstItem="FP8-AN-mUX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hdW-Qe-aaL"/>
+                <constraint firstItem="xBI-y9-YQL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kN2-a6-rKQ"/>
+                <constraint firstAttribute="trailing" secondItem="FP8-AN-mUX" secondAttribute="trailing" id="xa7-qO-aYU"/>
+                <constraint firstAttribute="bottom" secondItem="xBI-y9-YQL" secondAttribute="bottom" id="zdL-eN-L0R"/>
+            </constraints>
+            <size key="customSize" width="344" height="161"/>
+            <connections>
+                <outlet property="backImageView" destination="xBI-y9-YQL" id="4Ol-9p-1Cp"/>
+                <outlet property="titleLabel" destination="jkv-06-RTX" id="Nmq-AD-rfI"/>
+            </connections>
+            <point key="canvasLocation" x="10" y="62.5"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="Img_default" width="172" height="103"/>
+    </resources>
 </document>

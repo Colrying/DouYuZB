@@ -1,19 +1,94 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionPrettyCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionPrettyCell" customModule="DouYuZB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="176" height="200"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <rect key="frame" x="0.0" y="0.0" width="176" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWm-J0-bZe">
+                        <rect key="frame" x="0.0" y="176" width="46" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="AsX-2L-zyt"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="郑州市" image="ico_location">
+                            <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="斗鱼TV模拟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j37-6r-KQ6">
+                        <rect key="frame" x="0.0" y="155" width="176" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="Xet-FQ-uPO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="live_cell_default_phone" translatesAutoresizingMaskIntoConstraints="NO" id="LuC-jf-G5L">
+                        <rect key="frame" x="0.0" y="0.0" width="176" height="150"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6969在线" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpb-eL-pG0">
+                        <rect key="frame" x="111.5" y="5" width="59.5" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="xSS-jh-hu4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                </subviews>
             </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="j37-6r-KQ6" firstAttribute="top" secondItem="LuC-jf-G5L" secondAttribute="bottom" constant="5" id="34d-DQ-Thy"/>
+                <constraint firstItem="LuC-jf-G5L" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Bot-4p-Lr3"/>
+                <constraint firstAttribute="bottom" secondItem="DWm-J0-bZe" secondAttribute="bottom" constant="10" id="Et7-c1-p4N"/>
+                <constraint firstItem="Lpb-eL-pG0" firstAttribute="trailing" secondItem="LuC-jf-G5L" secondAttribute="trailing" constant="-5" id="Luy-2A-4bB"/>
+                <constraint firstItem="DWm-J0-bZe" firstAttribute="top" secondItem="j37-6r-KQ6" secondAttribute="bottom" constant="5" id="Mee-X8-Tbr"/>
+                <constraint firstItem="Lpb-eL-pG0" firstAttribute="top" secondItem="LuC-jf-G5L" secondAttribute="top" constant="5" id="OO8-fn-V6f"/>
+                <constraint firstAttribute="trailing" secondItem="j37-6r-KQ6" secondAttribute="trailing" id="mkt-rf-yjz"/>
+                <constraint firstItem="j37-6r-KQ6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nGY-3q-68k"/>
+                <constraint firstItem="LuC-jf-G5L" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="nTG-55-8XP"/>
+                <constraint firstAttribute="trailing" secondItem="LuC-jf-G5L" secondAttribute="trailing" id="phM-PI-NAA"/>
+                <constraint firstItem="DWm-J0-bZe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uDb-Oq-znl"/>
+            </constraints>
+            <size key="customSize" width="176" height="200"/>
+            <connections>
+                <outlet property="addressBtn" destination="DWm-J0-bZe" id="gxL-48-Py4"/>
+                <outlet property="onlineLabel" destination="Lpb-eL-pG0" id="F4K-sc-V9d"/>
+                <outlet property="roomImageView" destination="LuC-jf-G5L" id="Ee2-9P-kh9"/>
+                <outlet property="roomNameLabel" destination="j37-6r-KQ6" id="vzE-OA-Mce"/>
+            </connections>
+            <point key="canvasLocation" x="5" y="-8"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="ico_location" width="12" height="12"/>
+        <image name="live_cell_default_phone" width="103" height="103"/>
+    </resources>
 </document>

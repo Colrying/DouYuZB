@@ -10,9 +10,25 @@ import UIKit
 
 class RecommendCycleViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var backImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    var cycleModel : RecommendCycleModel? {
+        didSet {
+            titleLabel.text = cycleModel?.title
+            
+            backImageView.kf.setImage(with: URL(string: (cycleModel?.pic_url)!))
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        
     }
-
+    
+    class func recommendCycleViewCell() -> RecommendCycleViewCell {
+        return Bundle.main.loadNibNamed("RecommendCycleViewCell", owner: nil, options: nil)?.first as! RecommendCycleViewCell
+    }
+    
 }
